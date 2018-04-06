@@ -20,6 +20,7 @@
  * @license   http://www.gnu.org/licenses/gpl.html GNU General Public License, Version 3
  */
 
+ require_once dirname(__FILE__).'/SegmentPlugin/Edx.php';
 /**
  * @category  phplist
  */
@@ -96,12 +97,6 @@ class SegmentPlugin_ConditionFactory
 
     public function subscriberFields()
     {
-        return array(
-            'activity' => 'Campaign activity',
-            'entered' => 'Entered date',
-            'email' => 'email address',
-            'id' => 'subscriber id',
-            'uniqid' => 'subscriber unique id',
-        );
+        return getCourses();
     }
 }
